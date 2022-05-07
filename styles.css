@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  background: url(https://www.toptal.com/designers/subtlepatterns/uploads/hip-square.png);
+  color: rgb(0, 0, 0);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.5em;
+}
+
+header {
+  margin: 30px;
+}
+
+ul > li {
+  list-style: none;
+}
+
+.reset-btn {
+  cursor: pointer;
+  background-color: #3C1518;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.contenedor-cronometro {
+  background: #BABF95;
+  border-radius: 0.5em;
+  color: black;
+  padding: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cronometro {
+  font-size: 1em;
+  color: #000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(73, 46, 46);
+  background-color: rgba(73, 46, 46, 0.6);
+}
+
+.contenido-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #fff;
+  margin: 5% auto;
+  border: 0.8em solid #B3140E;
+  padding-right: 2em;
+  width: 80%;
+  color: #000;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cerrar {
+  align-self: flex-end;
+  color: rgb(238, 34, 34);
+  font-size: 5em;
+}
+
+.cerrar:hover .cerrar:focus {
+  color: rgb(100, 12, 8);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-img {
+  display: inline-block;
+  margin: 1em 0 1em;
+  width: 20em;
+}
+
+.play-again-btn {
+  background: rgb(#3C1518);
+  padding: 10px;
+  font-size: 15px;
+  margin: 15px;
+}
+
+.btn {
+  border-radius: 0.3em;
+  border: none;
+  color: rgb(255, 255, 255);
+  box-shadow: 5px 2px 20px rgba(88, 34, 34, 0.5);
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+.panel-puntos {
+  font-size: 1.4em;
+  padding: 1em 0 2em;
+  display: inline-block;
+}
+
+.puntos-estrellas > li {
+  display: inline-block;
+  padding: 0.5em;
+}
+
+#puntuacion-estrellas {
+  color: #b6b60d;
+}
+
+.contador-movimientos {
+  padding: 0.5em;
+}
+
+.juego-memoria {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.tarjeta-memoria {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.tarjeta-memoria:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.tarjeta-memoria.girada {
+  transform: rotateY(180deg);
+}
+
+.frente,
+.dorso {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #B3140E;
+  backface-visibility: hidden;
+}
+
+.frente {
+  transform: rotateY(180deg);
+}

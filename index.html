@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Memoria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="avengers.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Juego de la Memoria</h1>
+            <h2>Marvel edition</h2>
+            <div class="panel-puntos">
+                <h3>Calificacion:</h3>
+                <ul id="puntuacion-estrellas" class="puntos-estrellas">
+                    <li class="estrella"><i class="fa fa-star"></i></li>
+                    <li class="estrella"><i class="fa fa-star"></i></li>
+                    <li class="estrella"><i class="fa fa-star"></i></li>
+                </ul>
+                <span class="contador-movimientos">0</span> Movimientos
+                <div class="contenedor-cronometro">
+                    <span class="cronometro"><i class="fa fa-hourglass-start"></i>Tiempo: 00:00</span>
+                </div>
+                <div class="resetear">
+                    <button class="btn reset-btn">Reiniciar <i class="fa fa-repeat"></i></button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <!--Modal-->
+    <section class="modal-victoria">
+        <div id="modal" class="modal">
+            <!--Contenido del modal-->
+            <div class="contenido-modal">
+                <span class="cerrar">&times;</span>
+                <h2>Felicitaciones!</h2>
+                <p>Ganaste el juego y encontraste los 6 pares de tarjetas.</p>
+                <img class="modal-img" src="./img/thumbsup.gif" alt="Guantelete del Infinito con Pulgar Arriba">
+                <button class="btn play-again-btn">Jugar de nuevo?</button>
+            </div>
+        </div>
+    </section>
+    <section class="juego-memoria">
+        <div class="tarjeta-memoria" data-personaje="captain-america">
+            <img class="frente" src="./img/captain-america.png" alt="Captain America">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="captain-america">
+            <img class="frente" src="./img/captain-america.png" alt="Captain America">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="dr-strange">
+            <img class="frente" src="./img/dr-strange.png" alt="Dr Strange">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="dr-strange">
+            <img class="frente" src="./img/dr-strange.png" alt="Dr Strange">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="ironman">
+            <img class="frente" src="./img/ironman.png" alt="Iron Man">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="ironman">
+            <img class="frente" src="./img/ironman.png" alt="Iron Man">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="loki">
+            <img class="frente" src="./img/loki.png" alt="Loki">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="loki">
+            <img class="frente" src="./img/loki.png" alt="Loki">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="spiderman">
+            <img class="frente" src="./img/spiderman.png" alt="Spider Man">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="spiderman">
+            <img class="frente" src="./img/spiderman.png" alt="Spider Man">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="thor">
+            <img class="frente" src="./img/thor-mjolnir.png" alt="Thor">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+        <div class="tarjeta-memoria" data-personaje="thor">
+            <img class="frente" src="./img/thor-mjolnir.png" alt="Thor">
+            <img class="dorso" src="./img/logo-marvel.png" alt="Marvel">
+        </div>
+    </section>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
