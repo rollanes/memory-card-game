@@ -14,7 +14,6 @@ function voltearTarjeta() {
         empezarTiempo = true
         cronometrar()
     }
-    console.log(this)
     this.classList.add("girada");
 
     if (!volteoLaTarjeta) {
@@ -110,7 +109,8 @@ function pararCronometro(){
 
 function reiniciarTodo(){
     pararCronometro()
-    mezclarTarjetas()
+    limpiarTarjetas()
+    tableroBloqueado = false
     empezarTiempo = false
     segundos = 0
     minutos = 0
@@ -120,7 +120,7 @@ function reiniciarTodo(){
     contadorEstrellas = 3
     contadorMovimientos.innerHTML = 0
     mostradas = 0
-    limpiarTarjetas()
+    mezclarTarjetas()
 
 }
 
@@ -143,11 +143,11 @@ function mostrarModal(){
     const cierreModal = document.getElementsByClassName("cerrar")[0]
     modal.style.display = "block"
     cierreModal.onclick = function(){
-        modal.style.display = "none"
+        ocultarModal()
     }
     window.onclick = function(event){
         if(event.target == modal){
-            modal.style.display = "none"
+            ocultarModal()
         }
     }
 }
@@ -161,14 +161,22 @@ function ganarJuego(){
 
 
 botonReset.addEventListener('click', reiniciarTodo)
-botonJugarDeNuevo.addEventListener("click", function(){
-    modal.style.display = "none"
-    reiniciarTodo()
-})
+botonJugarDeNuevo.addEventListener("click", jugarOtraVez)
 
 function limpiarTarjetas(){
     for (let i = 0; i < tarjetasColeccion.length; i++) {
     const element = tarjetasColeccion[i];
     element.classList.remove("girada")
+    primerTarjeta = null
+    segundaTarjeta = null
 }
+}
+
+function ocultarModal() {
+    modal.style.display = "none"
+}
+
+function jugarOtraVez(){
+    ocultarModal()
+    reiniciarTodo()
 }
