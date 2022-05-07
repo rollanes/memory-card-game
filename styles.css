@@ -82,12 +82,13 @@ ul > li {
   align-self: flex-end;
   color: rgb(238, 34, 34);
   font-size: 5em;
+  cursor: pointer;
 }
 
 .cerrar:hover .cerrar:focus {
   color: rgb(100, 12, 8);
   text-decoration: none;
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 .modal-img {
@@ -97,7 +98,7 @@ ul > li {
 }
 
 .play-again-btn {
-  background: rgb(#3C1518);
+  background:rgb(73, 46, 46);
   padding: 10px;
   font-size: 15px;
   margin: 15px;
